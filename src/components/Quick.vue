@@ -1,14 +1,14 @@
 <template>
-  <section class='specs'>
-    <el-row :gutter='10' justify='center' class='specs_content'>
+  <section class='quick'>
+    <el-row :gutter='10' justify='center' class='quick_content'>
       <el-col :xs='8' :sm='6' :md='4' :lg='20' :xl='20'>
         <div class='header'>
-          <h2>Продукт был создан специально для Вас</h2>
+          <h2>Быстрый и легкий процесс</h2>
         </div>
       </el-col>
     </el-row>
-    <el-row :gutter='10' justify='center' class='specs_content'>
-      <el-col v-for='(item, index) in specs' :key='item.index' :xs='12' :sm='12' :md='5' :lg='5' :xl='5' class='specs_content--items'>
+    <el-row :gutter='10' justify='center' class='quick_content'>
+      <el-col v-for='(item, index) in quick' :key='item.index' :xs='12' :sm='12' :md='5' :lg='5' :xl='5' class='quick_content--items'>
         <div class='item'>
           <div class='item-icon'>
             <Icon size='24'>
@@ -40,7 +40,7 @@ import { Icon } from '@vicons/utils'
 export default {
   data() {
     return {
-      specs: [
+      quick: [
         {
           title: 'Фича 1',
           text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, totam?',
@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss">
 @import '../colors.scss';
-.specs {
+.quick {
   
   &_content {
     padding-top: 1rem;

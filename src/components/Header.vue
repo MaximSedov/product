@@ -52,7 +52,6 @@ export default {
 <style lang="scss">
 @import '../colors.scss';
 .header {
-  margin-bottom: 2rem;
   &_content {
     display: flex;
     justify-content: space-between;

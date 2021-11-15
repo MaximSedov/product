@@ -4,6 +4,8 @@
   <Main/>
   <Specs/>
   <Managment/>
+  <Customer/>
+  <Collaborative/>
 </template>
 
 <script>
@@ -11,9 +13,12 @@ import Header from '@/components/Header.vue'
 import Main from '@/components/Main.vue'
 import Specs from '@/components/Specs.vue'
 import Managment from '@/components/Managment.vue'
+import Customer from '@/components/Customer.vue'
+import Collaborative from '@/components/Collaborative.vue'
+
 export default {
   components:{
-Header, Main, Specs, Managment
+Header, Main, Specs, Managment, Customer, Collaborative
   }
 }
 </script>

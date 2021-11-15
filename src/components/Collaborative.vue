@@ -1,20 +1,20 @@
 <template>
-  <section class='managment'>
-    <el-row :gutter='10' justify='center' class='managment_content'>
+  <section class='collaborative'>
+    <el-row :gutter='10' justify='center' class='collaborative_content'>
       <el-col :xs='8' :sm='6' :md='10' :lg='7' :xl='7'>
         <div class='subtitle'>
-          <span>Effortless Validation forас</span>
+          <span>Lorem, ipsum dolor.</span>
         </div>
-        <div class="title">Управление</div>
-        <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab culpa iure quaerat odit. Quo molestias odit tempora repellendus voluptas, omnis aperiam libero vero porro in doloribus obcaecati, excepturi possimus quasi.</div>
+        <div class="title">Совместно</div>
+        <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab culpa iure quaerat odit. Quo molestias odit tempora repellendus voluptas, omnis aperiam libero vero porro in</div>
         <div class="subtitle">Lorem, ipsum dolor.</div>
-        <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti est magnam vero quis necessitatibus, iusto labore rem fugit ut nesciunt, ipsam numquam adipisci sit, delectus officia praesentium atque quos accusamus.</div>
+        <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti est magnam vero quis necessitatibus, iusto labore rem fugit ut nesciunt, ipsam numquam adipisci</div>
         <div class="subtitle">Lorem, ipsum dolor.</div>
         <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse sint rerum, molestiae assumenda odio soluta consequatur laudantium. Alias, veniam quidem.</div>
       </el-col>
       <el-col :xs='8' :sm='6' :md='10' :lg='13' :xl='13'>
-        <div class='managment_content--img'>
-          <el-image :src='managment' fit='cover'></el-image>
+        <div class='collaborative_content--img'>
+          <el-image :src='collaborative' fit='cover'></el-image>
         </div>
       </el-col>
     </el-row>
@@ -22,11 +22,11 @@
 </template>
 
 <script>
-const managment = require('../assets/managment.png')
+const collaborative = require('../assets/collaborative.png')
 export default {
   data() {
     return {
-      managment
+      collaborative
     }
   },
   components: {
@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss">
 @import '../colors.scss';
-.managment {
+.collaborative {
   margin-top: 6rem;
   &_content {
     display: flex;

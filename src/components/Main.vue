@@ -46,7 +46,16 @@ export default {
 <style lang="scss">
 @import '../colors.scss';
 .main {
+  background-image: url('../assets/main-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
   &_content {
+    padding-top: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +64,7 @@ export default {
         h1{
           font-size: 3rem;
         font-weight: bold;
-        margin-bottom: 0;
+        margin-bottom: 2rem;
         line-height: 3.5rem;
         color: $mainBlack;
         }
