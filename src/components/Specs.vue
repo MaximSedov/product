@@ -1,13 +1,13 @@
 <template>
   <section class='specs'>
-    <el-row :gutter='10' justify='center' class='specs_content'>
+    <el-row  justify='center' class='specs_content'>
       <el-col :xs='8' :sm='6' :md='4' :lg='20' :xl='20'>
         <div class='header'>
           <h2>Продукт был создан специально для Вас</h2>
         </div>
       </el-col>
     </el-row>
-    <el-row :gutter='10' justify='center' class='specs_content'>
+    <el-row  justify='center' class='specs_content'>
       <el-col v-for='(item, index) in specs' :key='item.index' :xs='12' :sm='12' :md='5' :lg='5' :xl='5' class='specs_content--items'>
         <div class='item'>
           <div class='item-icon'>
@@ -20,7 +20,7 @@
         </div>
       </el-col>
     </el-row>
-    <el-row :gutter='10' justify='center'>
+    <el-row  justify='center'>
       <el-col :xs='12' :sm='12' :md='10' :lg='10' :xl='10' style="text-align: center; margin-top: 3rem; margin-bottom:3rem;">
          <el-button style="font-weight:bold" type='success'>Присоединиться сейчас</el-button>
       </el-col>

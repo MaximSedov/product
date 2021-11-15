@@ -1,6 +1,6 @@
 <template>
   <section class='quick'>
-    <el-row :gutter='10' justify='center' class='quick_content'>
+    <el-row  justify='center' class='quick_content'>
       <el-col :xs='12' :sm='20' :md='20' :lg='20' :xl='20'>
         <div class='header'>
           <h2>Быстрый и легкий процесс</h2>

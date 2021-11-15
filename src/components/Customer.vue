@@ -1,6 +1,6 @@
 <template>
   <section class='customer'>
-    <el-row :gutter='10' justify='center' class='customer_content'>
+    <el-row  justify='center' class='customer_content'>
       <el-col :xs='8' :sm='6' :md='10' :lg='13' :xl='13'>
         <div class='customer_content--img'>
           <el-image :src='customer' fit='cover'></el-image>

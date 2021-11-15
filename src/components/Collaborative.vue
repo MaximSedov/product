@@ -1,6 +1,6 @@
 <template>
   <section class='collaborative'>
-    <el-row :gutter='10' justify='center' class='collaborative_content'>
+    <el-row justify='center' class='collaborative_content'>
       <el-col :xs='8' :sm='6' :md='10' :lg='7' :xl='7'>
         <div class='subtitle'>
           <span>Lorem, ipsum dolor.</span>

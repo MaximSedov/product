@@ -1,5 +1,4 @@
 <template>
-  
   <Header/>
   <Main/>
   <Specs/>
@@ -30,11 +29,13 @@ Header, Main, Specs, Managment, Customer, Collaborative, Quick
 *{
   font-family: 'Noto Sans Mono', monospace;
 }
-body,p,ul,li, h1, h2, span{
+html,body, p,ul,li, h1, h2, span{
   margin: 0;
   padding: 0;
 }
-
+/* ::-webkit-scrollbar {
+  width: 0;
+} */
 
 
 </style>

@@ -1,6 +1,6 @@
 <template>
   <section class='main'>
-    <el-row :gutter='10' justify='center' class='main_content'>
+    <el-row  justify='center' class='main_content'>
       <el-col :xs='8' :sm='6' :md='4' :lg='8' :xl='8'>
         <div class='main_content--text'>
           <div class='header'> <h1>Работайте со скоростью мысли</h1> </div>

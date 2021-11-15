@@ -1,6 +1,6 @@
 <template>
   <section class='managment'>
-    <el-row :gutter='10' justify='center' class='managment_content'>
+    <el-row  justify='center' class='managment_content'>
       <el-col :xs='8' :sm='6' :md='10' :lg='7' :xl='7'>
         <div class='subtitle'>
           <span>Effortless Validation forас</span>

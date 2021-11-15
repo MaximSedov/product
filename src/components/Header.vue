@@ -1,6 +1,6 @@
 <template>
   <section class='header'>
-    <el-row :gutter='10' justify='center'>
+    <el-row  justify='center'>
       <el-col :xs='8' :sm='6' :md='4' :lg='20' :xl='20'>
         <div class='header_content'>
           <div class='header_content--logo'>
