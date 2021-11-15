@@ -1,30 +1,59 @@
 <template>
   <section class='quick'>
     <el-row :gutter='10' justify='center' class='quick_content'>
-      <el-col :xs='8' :sm='6' :md='4' :lg='20' :xl='20'>
+      <el-col :xs='12' :sm='20' :md='20' :lg='20' :xl='20'>
         <div class='header'>
           <h2>Быстрый и легкий процесс</h2>
+          <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae!</span>
         </div>
       </el-col>
-    </el-row>
-    <el-row :gutter='10' justify='center' class='quick_content'>
-      <el-col v-for='(item, index) in quick' :key='item.index' :xs='12' :sm='12' :md='5' :lg='5' :xl='5' class='quick_content--items'>
+      <el-col :xs='12' :sm='12' :md='10' :lg='8' :xl='8' class='quick_content--items'>
         <div class='item'>
-          <div class='item-icon'>
-            <Icon size='24'>
-              <component :is='item.icon'></component>
-            </Icon>
+          <div class='avatar'>
+            <el-avatar fit='contain' :size='100' :src='avatar_1'></el-avatar>
           </div>
-          <div class='item-title'>{{item.title}}</div>
-          <div class='item-text'>{{item.text}}</div>
+          <div class='comment'>
+            <span>Lorem, ipsum dolor.</span>
+            <div class='comment--arrow_left'></div>
+          </div>
+        </div>
+        <div class='item'>
+          <div class='comment'>
+            <span>Lorem, ipsum dolor.</span>
+            <div class='comment--arrow_right'></div>
+          </div>
+          <div class='avatar'>
+            <el-avatar fit='contain' :size='100' :src='avatar_2'></el-avatar>
+          </div>
         </div>
       </el-col>
-    </el-row>
-    <el-row :gutter='10' justify='center'>
-      <el-col :xs='12' :sm='12' :md='10' :lg='10' :xl='10' style="text-align: center; margin-top: 3rem; margin-bottom:3rem;">
-         <el-button style="font-weight:bold" type='success'>Присоединиться сейчас</el-button>
+      <el-col :xs='12' :sm='12' :md='10' :lg='8' :xl='8' class='quick_content--items'>
+        <div class='item'>
+          <div class='comment'>
+            <span>Lorem, ipsum dolor.</span>
+            <div class='comment--arrow_right'></div>
+          </div>
+          <div class='avatar'>
+            <el-avatar fit='contain' :size='100' :src='avatar_3'></el-avatar>
+          </div>
+        </div>
+        <div class='item'>
+          <div class='avatar'>
+            <el-avatar fit='contain' :size='100' :src='avatar_4'></el-avatar>
+          </div>
+          <div class='comment'>
+            <span>Lorem, ipsum dolor.</span>
+            <div class='comment--arrow_left'></div>
+          </div>
+        </div>
       </el-col>
+      
+      <el-col :xs='24' :sm='24' :md='20' :lg='20' :xl='20' style="text-align: center; margin-top: 3rem; margin-bottom:3rem;">
+         <el-button style="font-weight:bold" type='success'>Свяжитесь с нашим экспертом</el-button>
+      </el-col>
+    
     </el-row>
+    
   </section>
 </template>
 
@@ -36,32 +65,17 @@ import {
   Smartwatch20Filled,
 } from '@vicons/fluent'
 import { Icon } from '@vicons/utils'
-
+const avatar_1 = require('../assets/avatar-1.jpg')
+const avatar_2 = require('../assets/avatar-2.jpg')
+const avatar_3 = require('../assets/avatar-3.jpg')
+const avatar_4 = require('../assets/avatar-4.jpg')
 export default {
   data() {
     return {
-      quick: [
-        {
-          title: 'Фича 1',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, totam?',
-          icon: 'CursorClick24Filled',
-        },
-        {
-          title: 'Фича 2',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, totam?',
-          icon: 'Lottery24Filled',
-        },
-        {
-          title: 'Фича 3',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, totam?',
-          icon: 'Heart16Filled',
-        },
-        {
-          title: 'Фича 4',
-          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, totam?',
-          icon: 'Smartwatch20Filled',
-        },
-      ],
+      avatar_1,
+      avatar_2,
+      avatar_3,
+      avatar_4,
     }
   },
   components: {
@@ -77,49 +91,81 @@ export default {
 <style lang="scss">
 @import '../colors.scss';
 .quick {
-  
+  background-image: url('../assets/quick-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  min-height: 600px;
+
   &_content {
+    min-height: 600px;
     padding-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     .header {
       text-align: center;
-      margin-bottom: 3rem;
       margin-top: 3rem;
+      margin-bottom: 3rem;
       h2 {
         font-size: 2rem;
         color: $mainBlack !important;
+        margin-bottom: 1rem;
       }
     }
     &--items {
+      display: flex;
+      justify-content: center;
       .item {
-        &-icon {
-          .xicon {
-            padding: 0.5rem;
-            border-radius: 1rem;
-            color: $white;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .avatar {
+          margin-right: 2rem;
+          margin-left: 2rem;
+          .el-avatar--circle {
+            border: 2px solid $mainGreen;
           }
         }
-        &-title {
-          margin-top: 1rem;
-          margin-bottom: 1rem;
-          font-weight: bold;
-          font-size: 1.3rem;
-          color: $mainBlack;
+        .comment {
+          position: relative;
+          background-color: $white;
+          border-radius: 2rem;
+          padding: 1rem;
+          z-index: 1;
+          -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+          span {
+              position: relative;
+            z-index: 1000 !important;
+          }
+          &--arrow_left {
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.5rem;
+            background-color: $white;
+            left: 3rem;
+            bottom: -0.5rem;
+            transform: rotate(150deg);
+            z-index: 1;
+          }
+          &--arrow_right {
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.5rem;
+            background-color: $white;
+            right: 3rem;
+            bottom: -0.5rem;
+            transform: rotate(120deg);
+            z-index: 1;
+          }
         }
-      }
-      &:nth-child(1) .xicon {
-        background-color: $mainGreen;
-      }
-      &:nth-child(2) .xicon {
-        background-color: $mainYellow;
-      }
-      &:nth-child(3) .xicon {
-        background-color: $mainBlue;
-      }
-      &:nth-child(4) .xicon {
-        background-color: $mainRed;
       }
     }
   }

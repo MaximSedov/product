@@ -6,6 +6,7 @@
   <Managment/>
   <Customer/>
   <Collaborative/>
+  <Quick/>
 </template>
 
 <script>
@@ -15,10 +16,11 @@ import Specs from '@/components/Specs.vue'
 import Managment from '@/components/Managment.vue'
 import Customer from '@/components/Customer.vue'
 import Collaborative from '@/components/Collaborative.vue'
+import Quick from '@/components/Quick.vue'
 
 export default {
   components:{
-Header, Main, Specs, Managment, Customer, Collaborative
+Header, Main, Specs, Managment, Customer, Collaborative, Quick
   }
 }
 </script>
