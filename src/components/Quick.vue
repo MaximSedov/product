@@ -47,13 +47,11 @@
           </div>
         </div>
       </el-col>
-      
-      <el-col :xs='24' :sm='24' :md='20' :lg='20' :xl='20' style="text-align: center; margin-top: 3rem; margin-bottom:3rem;">
-         <el-button style="font-weight:bold" type='success'>Свяжитесь с нашим экспертом</el-button>
+
+      <el-col :xs='24' :sm='24' :md='20' :lg='20' :xl='20' style='text-align: center; margin-top: 3rem; margin-bottom:3rem;'>
+        <el-button style='font-weight:bold' type='success'>Свяжитесь с нашим экспертом</el-button>
       </el-col>
-    
     </el-row>
-    
   </section>
 </template>
 
@@ -137,10 +135,10 @@ export default {
           padding: 1rem;
           z-index: 1;
           -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
--moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+          -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
           span {
-              position: relative;
+            position: relative;
             z-index: 1000 !important;
           }
           &--arrow_left {
