@@ -11,7 +11,7 @@
               <div class v-for='(item, index) in navbar' :key='item.index'>{{item.title}}</div>
             </div>
             <div class='header_content--navbar__buttons'>
-              <el-button>Вход</el-button>
+              <el-button class="signin">Вход</el-button>
               <el-button type='success'>Регистрация</el-button>
             </div>
             <div class='header_content--navbar__nightmode'>
@@ -62,6 +62,7 @@ export default {
       align-items: center;
       font-weight: bold;
       font-size: 1.5rem;
+      color: $mainBlack;
       .el-image {
         margin-right: 1rem;
       }
@@ -82,6 +83,13 @@ export default {
         }
       }
       &__buttons {
+        .signin{
+          &:hover, &:active, &:focus{
+            background-color: $lightGreenOpacity !important;
+            color: $white !important;
+            border-color: $lightGreenOpacity !important;
+          }
+        }
       }
       &__nightmode {
         display: flex;

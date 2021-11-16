@@ -108,6 +108,9 @@ export default {
           font-size: 1.3rem;
           color: $mainBlack;
         }
+        &-text{
+          padding-right: 1rem;
+        }
       }
       &:nth-child(1) .xicon {
         background-color: $mainGreen;

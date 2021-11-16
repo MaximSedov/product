@@ -6,6 +6,11 @@
   <Customer/>
   <Collaborative/>
   <Quick/>
+  <Strategies/>
+  <Price/>
+  <Clients/>
+  <Banner/>
+  <Footer/>
 </template>
 
 <script>
@@ -16,20 +21,26 @@ import Managment from '@/components/Managment.vue'
 import Customer from '@/components/Customer.vue'
 import Collaborative from '@/components/Collaborative.vue'
 import Quick from '@/components/Quick.vue'
+import Strategies from '@/components/Strategies.vue'
+import Price from '@/components/Price.vue'
+import Clients from '@/components/Clients.vue'
+import Banner from '@/components/Banner.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   components:{
-Header, Main, Specs, Managment, Customer, Collaborative, Quick
+Header, Main, Specs, Managment, Customer, Collaborative, Quick, Strategies, Price, Clients, Banner, Footer
   }
 }
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;700;800;900&display=swap');
+@import './colors.scss';
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 *{
-  font-family: 'Noto Sans Mono', monospace;
+  font-family: 'Roboto', sans-serif;
 }
-html,body, p,ul,li, h1, h2, span{
+html,body, p,ul,ol,li, h1, h2, span{
   margin: 0;
   padding: 0;
 }

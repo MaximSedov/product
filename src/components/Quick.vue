@@ -125,7 +125,7 @@ export default {
           margin-right: 2rem;
           margin-left: 2rem;
           .el-avatar--circle {
-            border: 2px solid $mainGreen;
+            border: 2px solid $darkGray;
           }
         }
         .comment {
