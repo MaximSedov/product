@@ -1,9 +1,9 @@
 <template>
   <section class='footer'>
     <el-row justify='center' class='footer_content'>
-      <el-col :xs='24' :sm='24' :md='20' :lg='20' :xl='20'>
+      <el-col :xs='22' :sm='22' :md='20' :lg='20' :xl='20'>
         <el-row>
-          <el-col :xs='6' :sm='6' :md='6' :lg='6' :xl='6'>
+          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6'>
             <div class='block'>
               <div class='logo'>
                 <el-image style='width: 40px; height: 40px' :src='logo' fit='cover'></el-image>Product
@@ -21,7 +21,7 @@
               </div>
             </div>
           </el-col>
-          <el-col :xs='6' :sm='6' :md='6' :lg='6' :xl='6'>
+          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6'>
               <div class="block">
                   <div class="title">Ресуры</div>
                   <div class="nav-link">Продукт</div>
@@ -30,7 +30,7 @@
                   <div class="nav-link">Контакты</div>
               </div>
           </el-col>
-          <el-col :xs='6' :sm='6' :md='6' :lg='6' :xl='6'>
+          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6' class="desktop">
               <div class="block">
                   <div class="title">Юридические вопросы</div>
                   <div class="nav-link">Финансирование</div>
@@ -38,16 +38,31 @@
                   <div class="nav-link">Условия обслуживания</div>
               </div>
           </el-col>
-          <el-col :xs='6' :sm='6' :md='6' :lg='6' :xl='6'>
+          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6' class="desktop">
               <div class="block">
                   <div class="form_title">Lorem ipsum dolor sit amet consectetur.</div>
                   <el-input v-model="input" placeholder="Почта" />
                    <el-button style='font-weight:bold' type='success'>Отправить</el-button>
               </div>
           </el-col>
+          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6' class="mobile">
+              <div class="block">
+                  <div class="form_title">Lorem ipsum dolor sit amet consectetur.</div>
+                  <el-input v-model="input" placeholder="Почта" />
+                   <el-button style='font-weight:bold' type='success'>Отправить</el-button>
+              </div>
+          </el-col>
+          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6' class="mobile">
+              <div class="block">
+                  <div class="title">Юридические вопросы</div>
+                  <div class="nav-link">Финансирование</div>
+                  <div class="nav-link">Политика конфиденциальности</div>
+                  <div class="nav-link">Условия обслуживания</div>
+              </div>
+          </el-col>
         </el-row>
         <el-row justify='center'>
-            <el-col :xs='24' :sm='24' :md='24' :lg='24' :xl='24'>
+            <el-col :xs='22' :sm='22' :md='24' :lg='24' :xl='24'>
                 <div class="footer_content--text">
                     dev by <a href="https://sdvmxm.ru" target="_blank" rel="noopener noreferrer">sdvmxm</a> / design by Figmaland && канал @figma2html
                 </div>
@@ -152,6 +167,20 @@ export default {
             }
         }
     }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .footer_content .desktop{
+      display: none;
+  }
+  .footer_content .block .el-input{
+    padding-right: 1rem !important;
+    box-sizing: border-box;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer_content .mobile{
+      display: none;
   }
 }
 </style>

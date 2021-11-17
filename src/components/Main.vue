@@ -1,7 +1,7 @@
 <template>
   <section class='main'>
     <el-row  justify='center' class='main_content'>
-      <el-col :xs='8' :sm='6' :md='4' :lg='8' :xl='8'>
+      <el-col :xs='22' :sm='22' :md='8' :lg='8' :xl='8'>
         <div class='main_content--text'>
           <div class='header'> <h1>Работайте со скоростью мысли</h1> </div>
           <div class='text'>
@@ -17,7 +17,7 @@
         </div>
         <div class='main_content--img'></div>
       </el-col>
-      <el-col :xs='8' :sm='6' :md='4' :lg='12' :xl='12'>
+      <el-col :xs='22' :sm='22' :md='12' :lg='12' :xl='12'>
         <div class='main_content--img'>
           <el-image :src='main' fit='cover'></el-image>
         </div>
@@ -102,6 +102,12 @@ export default {
       display: flex;
       justify-content: end;
     }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .main_content--img{
+    margin-top: 2rem;
+    justify-content: center;
   }
 }
 </style>

@@ -4,9 +4,9 @@
       <h2>Что говорят клиенты</h2>
     </div>
     <el-row justify='center' class='clients_content'>
-      <el-col :xs='8' :sm='6' :md='20' :lg='20' :xl='20'>
+      <el-col :xs='22' :sm='22' :md='20' :lg='20' :xl='20'>
         <el-row justify='space-between'>
-          <el-col :xs='8' :sm='6' :md='7' :lg='7' :xl='7' class='clients_content-card'>
+          <el-col :xs='24' :sm='24' :md='7' :lg='7' :xl='7' class='clients_content-card'>
             <div class='rate'>
               <Icon size='24'>
                 <StarEmphasis20Filled />
@@ -37,7 +37,7 @@
               </div>
             </div>
           </el-col>
-          <el-col :xs='8' :sm='6' :md='7' :lg='7' :xl='7' class='clients_content-card'>
+          <el-col :xs='24' :sm='24' :md='7' :lg='7' :xl='7' class='clients_content-card'>
             <div class='rate'>
               <Icon size='24'>
                 <StarEmphasis20Filled />
@@ -68,7 +68,7 @@
               </div>
             </div>
           </el-col>
-          <el-col :xs='8' :sm='6' :md='7' :lg='7' :xl='7' class='clients_content-card'>
+          <el-col :xs='24' :sm='24' :md='7' :lg='7' :xl='7' class='clients_content-card'>
             <div class='rate'>
               <Icon size='24'>
                 <StarEmphasis20Filled />
@@ -176,6 +176,11 @@ export default {
           }
       }
     }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .clients_content-card{
+    margin-bottom: 2rem;
   }
 }
 </style>

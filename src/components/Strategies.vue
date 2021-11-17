@@ -1,7 +1,7 @@
 <template>
   <section class='strategies'>
     <el-row justify='center' class='strategies_content'>
-      <el-col :xs='24' :sm='24' :md='20' :lg='20' :xl='20'>
+      <el-col :xs='22' :sm='22' :md='20' :lg='20' :xl='20'>
         <el-row justify='start'>
           <el-col :xs='24' :sm='24' :md='24' :lg='24' :xl='24' class='header'>
             <div class='header_title'>Стратегии</div>
@@ -71,9 +71,9 @@ export default defineComponent({
 
       breakpoints: {
         // 700px and up
-        700: {
-          itemsToShow: 2,
-          snapAlign: 'center',
+        400: {
+          itemsToShow: 1,
+          snapAlign: 'start',
         },
         // 1024 and up
         1024: {
@@ -175,5 +175,8 @@ export default defineComponent({
       }
     }
   }
+}
+@media only screen and (max-width: 768px) {
+  
 }
 </style>

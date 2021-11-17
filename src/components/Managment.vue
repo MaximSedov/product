@@ -1,7 +1,7 @@
 <template>
   <section class='managment'>
     <el-row  justify='center' class='managment_content'>
-      <el-col :xs='8' :sm='6' :md='10' :lg='7' :xl='7'>
+      <el-col :xs='22' :sm='22' :md='10' :lg='7' :xl='7'>
         <div class='subtitle'>
           <span>Effortless Validation forас</span>
         </div>
@@ -12,7 +12,7 @@
         <div class="subtitle">Lorem, ipsum dolor.</div>
         <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse sint rerum, molestiae assumenda odio soluta consequatur laudantium. Alias, veniam quidem.</div>
       </el-col>
-      <el-col :xs='8' :sm='6' :md='10' :lg='13' :xl='13'>
+      <el-col :xs='22' :sm='22' :md='10' :lg='13' :xl='13'>
         <div class='managment_content--img'>
           <el-image :src='managment' fit='cover'></el-image>
         </div>
@@ -61,6 +61,12 @@ export default {
       justify-content: end;
     }
     
+  }
+}
+@media only screen and (max-width: 992px) {
+  .managment_content--img{
+    margin-top: 2rem;
+    justify-content: center;
   }
 }
 </style>

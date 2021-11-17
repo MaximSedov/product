@@ -2,9 +2,9 @@
   <section class='price'>
     <div class='header'><h2>Цены</h2></div>
     <el-row justify='center' class='price_content'>
-      <el-col :xs='8' :sm='6' :md='20' :lg='20' :xl='20'>
+      <el-col :xs='22' :sm='22' :md='20' :lg='20' :xl='20'>
         <el-row justify='space-between'>
-          <el-col :xs='8' :sm='6' :md='7' :lg='7' :xl='7' class='price_content-card'>
+          <el-col :xs='24' :sm='24' :md='7' :lg='7' :xl='7' class='price_content-card'>
             <div class='title'>Бесплатно</div>
             <div class='subtitle'>Lorem, ipsum dolor.</div>
             <div class='cost'>
@@ -27,7 +27,7 @@
               <el-button style='font-weight:bold;margin-bottom: 2rem; margin-top: 1rem' type='success'>Купить сейчас</el-button>
             </div>
           </el-col>
-          <el-col :xs='8' :sm='6' :md='7' :lg='7' :xl='7' class='price_content-card'>
+          <el-col :xs='24' :sm='24' :md='7' :lg='7' :xl='7' class='price_content-card'>
             <div class='title'>Стандарт</div>
             <div class='subtitle'>Lorem, ipsum dolor.</div>
             <div class='cost'>
@@ -50,7 +50,7 @@
               <el-button style='font-weight:bold;margin-bottom: 2rem; margin-top: 1rem' type='success'>Купить сейчас</el-button>
             </div>
           </el-col>
-          <el-col :xs='8' :sm='6' :md='7' :lg='7' :xl='7' class='price_content-card'>
+          <el-col :xs='24' :sm='24' :md='7' :lg='7' :xl='7' class='price_content-card'>
             <div class='title'>Премиум</div>
             <div class='subtitle'>Lorem, ipsum dolor.</div>
             <div class='cost'>
@@ -180,6 +180,11 @@ export default {
         }
       }
     }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .price_content-card{
+    margin-bottom: 2rem;
   }
 }
 </style>

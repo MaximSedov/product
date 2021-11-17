@@ -1,14 +1,14 @@
 <template>
   <section class='specs'>
     <el-row  justify='center' class='specs_content'>
-      <el-col :xs='8' :sm='6' :md='4' :lg='20' :xl='20'>
+      <el-col :xs='22' :sm='22' :md='8' :lg='20' :xl='20'>
         <div class='header'>
           <h2>Продукт был создан специально для Вас</h2>
         </div>
       </el-col>
     </el-row>
     <el-row  justify='center' class='specs_content'>
-      <el-col v-for='(item, index) in specs' :key='item.index' :xs='12' :sm='12' :md='5' :lg='5' :xl='5' class='specs_content--items'>
+      <el-col v-for='(item, index) in specs' :key='item.index' :xs='11' :sm='11' :md='5' :lg='5' :xl='5' class='specs_content--items'>
         <div class='item'>
           <div class='item-icon'>
             <Icon size='24'>
@@ -124,6 +124,13 @@ export default {
       &:nth-child(4) .xicon {
         background-color: $mainRed;
       }
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .specs_content--items{
+    .item{
+      margin-bottom: 1rem;
     }
   }
 }

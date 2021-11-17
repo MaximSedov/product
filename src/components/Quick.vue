@@ -1,13 +1,13 @@
 <template>
   <section class='quick'>
     <el-row  justify='center' class='quick_content'>
-      <el-col :xs='12' :sm='20' :md='20' :lg='20' :xl='20'>
+      <el-col :xs='22' :sm='22' :md='20' :lg='20' :xl='20'>
         <div class='header'>
           <h2>Быстрый и легкий процесс</h2>
           <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae!</span>
         </div>
       </el-col>
-      <el-col :xs='12' :sm='12' :md='10' :lg='8' :xl='8' class='quick_content--items'>
+      <el-col :xs='22' :sm='11' :md='10' :lg='8' :xl='8' class='quick_content--items mobile-reverse'>
         <div class='item'>
           <div class='avatar'>
             <el-avatar fit='contain' :size='100' :src='avatar_1'></el-avatar>
@@ -27,7 +27,7 @@
           </div>
         </div>
       </el-col>
-      <el-col :xs='12' :sm='12' :md='10' :lg='8' :xl='8' class='quick_content--items'>
+      <el-col :xs='22' :sm='11' :md='10' :lg='8' :xl='8' class='quick_content--items'>
         <div class='item'>
           <div class='comment'>
             <span>Lorem, ipsum dolor.</span>
@@ -166,6 +166,12 @@ export default {
         }
       }
     }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .quick_content--items.mobile-reverse{
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 </style>

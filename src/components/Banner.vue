@@ -1,13 +1,12 @@
 <template>
   <section class='banner'>
     <el-row justify='center'>
-      <el-col :xs='8' :sm='6' :md='18' :lg='18' :xl='18' class='banner_content'>
+      <el-col :xs='22' :sm='22' :md='18' :lg='18' :xl='18' class='banner_content'>
         <div class='text'>
           Присоединяйтесь к более чем
           <br />100 компаниям, которые улучшили
           <br />свой бизнес благодаря
-          <br />
-нашему Продукту
+          <br />нашему Продукту
         </div>
         <el-button type='success'>Купить сейчас</el-button>
       </el-col>
@@ -53,6 +52,11 @@ export default {
       margin-left: 3rem;
       font-size: 1.5rem;
     }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .banner_content{
+    background-image: none;
   }
 }
 </style>

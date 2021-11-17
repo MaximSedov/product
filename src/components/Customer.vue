@@ -1,12 +1,12 @@
 <template>
   <section class='customer'>
     <el-row  justify='center' class='customer_content'>
-      <el-col :xs='8' :sm='6' :md='10' :lg='13' :xl='13'>
+      <el-col :xs='22' :sm='22' :md='10' :lg='13' :xl='13'>
         <div class='customer_content--img'>
           <el-image :src='customer' fit='cover'></el-image>
         </div>
       </el-col>
-      <el-col :xs='8' :sm='6' :md='10' :lg='7' :xl='7'>
+      <el-col :xs='22' :sm='22' :md='10' :lg='7' :xl='7'>
         <div class='subtitle'>
           <span>Lorem, ipsum dolor.</span>
         </div>
@@ -109,6 +109,15 @@ export default {
         }
       }
     }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .customer_content{
+    flex-direction: column-reverse;
+  }
+  .customer_content--img{
+    margin-top: 2rem;
+    justify-content: center;
   }
 }
 </style>
