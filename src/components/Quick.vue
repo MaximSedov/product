@@ -7,7 +7,7 @@
           <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae!</span>
         </div>
       </el-col>
-      <el-col :xs='22' :sm='11' :md='10' :lg='8' :xl='8' class='quick_content--items mobile-reverse'>
+      <el-col :xs='22' :sm='22' :md='10' :lg='8' :xl='8' class='quick_content--items mobile-reverse'>
         <div class='item'>
           <div class='avatar'>
             <el-avatar fit='contain' :size='100' :src='avatar_1'></el-avatar>
@@ -27,7 +27,7 @@
           </div>
         </div>
       </el-col>
-      <el-col :xs='22' :sm='11' :md='10' :lg='8' :xl='8' class='quick_content--items'>
+      <el-col :xs='22' :sm='22' :md='10' :lg='8' :xl='8' class='quick_content--items mobile'>
         <div class='item'>
           <div class='comment'>
             <span>Lorem, ipsum dolor.</span>
@@ -168,10 +168,14 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .quick_content--items.mobile-reverse{
     display: flex;
     flex-direction: column-reverse;
+  }
+  .quick_content--items.mobile{
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>
