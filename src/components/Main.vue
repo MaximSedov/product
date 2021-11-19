@@ -46,7 +46,7 @@ export default {
 <style lang="scss">
 @import '../colors.scss';
 .main {
-  background-image: url('../assets/main-bg.png');
+  background-image: var(--main-bg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -66,12 +66,14 @@ export default {
         font-weight: bold;
         margin-bottom: 2rem;
         line-height: 3.5rem;
-        color: $mainBlack;
+        color: var(--text-primary-color);
         }
         
       }
       .text{
         margin-bottom: 2rem;
+        color: var(--text-primary-color);
+        line-height: 2rem;
         p{
           font-weight: 500;
         }

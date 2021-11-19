@@ -89,7 +89,7 @@ export default {
       margin-top: 3rem;
       h2 {
         font-size: 2rem;
-        color: $mainBlack !important;
+        color: var(--text-primary-color) !important;
       }
     }
     &--items {
@@ -98,7 +98,7 @@ export default {
           .xicon {
             padding: 0.5rem;
             border-radius: 1rem;
-            color: $white;
+            color: var(--background-color-primary);
           }
         }
         &-title {
@@ -106,9 +106,10 @@ export default {
           margin-bottom: 1rem;
           font-weight: bold;
           font-size: 1.3rem;
-          color: $mainBlack;
+          color: var(--text-primary-color);
         }
         &-text{
+          color: var(--text-primary-color);
           padding-right: 1rem;
         }
       }

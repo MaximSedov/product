@@ -67,11 +67,29 @@ export default defineComponent({
           date: '08 Ноября 2021',
           title: 'Lorem ipsum dolor sit. Lorem, ipsum dolor.',
         },
+        {
+          img: 'strategies_1',
+          author: 'Alex Wake',
+          date: '10 Ноября 2021',
+          title: 'Lorem ipsum dolor sit. Lorem, ipsum dolor.',
+        },
+        {
+          img: 'strategies_2',
+          author: 'Ivan Loginov',
+          date: '09 Ноября 2021',
+          title: 'Lorem ipsum dolor sit. Lorem, ipsum dolor.',
+        },
+        {
+          img: 'strategies_3',
+          author: 'Alex Wake',
+          date: '08 Ноября 2021',
+          title: 'Lorem ipsum dolor sit. Lorem, ipsum dolor.',
+        }
       ],
 
       breakpoints: {
         // 700px and up
-        400: {
+        0: {
           itemsToShow: 1,
           snapAlign: 'start',
         },
@@ -154,7 +172,7 @@ export default defineComponent({
         }
         .title {
           padding: 1rem;
-          color: $mainBlack;
+          color: var(--text-secondary-color);
           font-size: 1.5rem;
           line-height: 2rem;
           font-weight: bold;

@@ -137,14 +137,14 @@ export default {
     padding-top: 6rem;
     h2 {
       font-size: 2rem;
-      color: $mainBlack !important;
+      color: var(--text-primary-color) !important;
       margin-bottom: 2rem;
     }
   }
   &_content {
     &-card {
         text-align: left;
-      color: $mainBlack;
+      color: var(--text-primary-color);
       border: 2px solid $mainGray;
       border-radius: 1rem;
       padding: 1rem;

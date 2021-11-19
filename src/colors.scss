@@ -9,3 +9,23 @@ $mainRed: #F03E3D;
 $mainGray: #f5f5f5;
 $mainBlack: #37474F;
 $darkGray: #b8b8b8;
+$mainBgLight: url("/assets/main-bg.png");
+$mainBgDark: url("/assets/main-bg-dark.png");
+
+:root {
+    --background-color-primary: #{$white};
+    --background-color-secondary: #fafafa;
+    --accent-color: #{$mainGreen};
+    --text-primary-color: #{$mainBlack};
+    --text-secondary-color: #{$mainGreen};
+    --main-bg: #{$mainBgLight};
+  }
+
+:root.dark-theme {
+    --background-color-primary: #{$mainBlack};
+    --background-color-secondary: #2d2d30;
+    --accent-color: #{$mainGreen};
+    --text-primary-color: #{$white};
+    --text-secondary-color: #{$mainGreen};
+    --main-bg: #{$mainBgDark};
+}

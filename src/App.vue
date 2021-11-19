@@ -39,6 +39,7 @@
   <Clients/>
   <Banner/>
   <Footer/>
+  <el-backtop />
 </template>
 
 <script>
@@ -80,6 +81,9 @@ html,body, p,ul,ol,li, h1, h2, span{
   margin: 0;
   padding: 0;
 }
+body{
+  background-color: var(--background-color-primary) !important;
+}
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -87,12 +91,23 @@ html,body, p,ul,ol,li, h1, h2, span{
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: $white;
+  background-color: var(--background-color-primary);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-
+.el-backtop{
+  background-color: $lightGreenOpacity !important;
+  &__icon{
+    color: $darkGreen !important;
+  }
+  &:hover{
+    background-color: $lightGreen !important;
+    .el-backtop__icon{
+      color: var(--background-color-primary) !important;
+    }
+  }
+}
 </style>

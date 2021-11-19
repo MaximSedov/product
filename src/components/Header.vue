@@ -21,7 +21,7 @@
               <el-button class='signin'>Вход</el-button>
               <el-button style='margin-right:2rem' type='success'>Регистрация</el-button>
             </div>
-            <div class='header_content--navbar__nightmode'>
+            <div class='header_content--navbar__nightmode' @click="setTheme(userTheme)">
               <Icon size='24'>
                 <ModeNightRound />
               </Icon>
@@ -48,6 +48,7 @@ export default {
     return {
       logo,
       drawer: false,
+      userTheme: "light-theme",
       navbar: [
         { title: 'Продукт', link: 'specs', offset: 30 },
         { title: 'Отзывы', link: 'quick', offset: 20 },
@@ -70,6 +71,18 @@ export default {
         el.scrollIntoView({ behavior: 'smooth' })
       }
     },
+    setTheme(theme) {
+    //localStorage.setItem("user-theme", theme);
+    if (theme == 'light-theme'){
+      theme = 'dark-theme'
+    }
+    else{
+      theme = 'light-theme'
+    }
+    console.log(theme)
+    this.userTheme = theme;
+    document.documentElement.className = theme;
+  }
   },
 }
 </script>
@@ -87,7 +100,7 @@ export default {
       align-items: center;
       font-weight: bold;
       font-size: 1.5rem;
-      color: $mainBlack;
+      color: var(--text-primary-color);
       .el-image {
         margin-right: 1rem;
       }
@@ -101,6 +114,7 @@ export default {
         div {
           box-sizing: border-box;
           margin-right: 2rem;
+          color: var(--text-primary-color);
         }
         div:hover {
           color: $mainGreen;
@@ -113,7 +127,7 @@ export default {
           &:active,
           &:focus {
             background-color: $lightGreenOpacity !important;
-            color: $white !important;
+            color: var(--background-color-primary) !important;
             border-color: $lightGreenOpacity !important;
           }
         }
@@ -138,7 +152,7 @@ export default {
   }
   &_content--navbar__links--mobile {
     text-align: center;
-    color: $mainBlack;
+    color: var(--text-primary-color);
     div {
       font-size: 2.5rem;
       margin-bottom: 3rem;

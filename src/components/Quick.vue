@@ -109,8 +109,11 @@ export default {
       margin-bottom: 3rem;
       h2 {
         font-size: 2rem;
-        color: $mainBlack !important;
+        color: var(--text-primary-color) !important;
         margin-bottom: 1rem;
+      }
+      span{
+        color: var(--text-primary-color);
       }
     }
     &--items {
@@ -130,7 +133,7 @@ export default {
         }
         .comment {
           position: relative;
-          background-color: $white;
+          background-color: var(--background-color-primary);
           border-radius: 2rem;
           padding: 1rem;
           z-index: 1;
@@ -140,13 +143,14 @@ export default {
           span {
             position: relative;
             z-index: 1000 !important;
+            color: var(--text-primary-color);
           }
           &--arrow_left {
             position: absolute;
             width: 2rem;
             height: 2rem;
             border-radius: 0.5rem;
-            background-color: $white;
+            background-color: var(--background-color-primary);
             left: 3rem;
             bottom: -0.5rem;
             transform: rotate(150deg);
@@ -157,7 +161,7 @@ export default {
             width: 2rem;
             height: 2rem;
             border-radius: 0.5rem;
-            background-color: $white;
+            background-color: var(--background-color-primary);
             right: 3rem;
             bottom: -0.5rem;
             transform: rotate(120deg);

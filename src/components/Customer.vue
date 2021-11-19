@@ -74,14 +74,17 @@ export default {
       font-weight: bold;
       font-size: 1.1rem;
       margin-bottom: 1rem;
+      color: var(--text-primary-color);
     }
     .title {
       font-size: 2rem;
       font-weight: bold;
       margin-bottom: 2rem;
+      color: var(--text-primary-color);
     }
     .text {
       margin-bottom: 2rem;
+      color: var(--text-primary-color);
     }
     &--img {
       display: flex;
@@ -92,11 +95,12 @@ export default {
         display: flex;
         align-items: center;
         margin-bottom: 2rem;
+        color: var(--text-primary-color);
         .xicon {
           padding: 0.3rem;
           border-radius: 0.9rem;
           margin-right: 2rem;
-          color: $white;
+          color: var(--background-color-primary);
         }
         &:nth-child(1) .xicon{
             background-color: $mainYellow;

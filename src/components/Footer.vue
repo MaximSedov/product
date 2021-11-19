@@ -81,6 +81,7 @@ export default {
   data() {
     return {
       logo,
+      input: '',
       navbar: [
         { title: 'Продукт', link: 'specs', offset: 30 },
         { title: 'Отзывы', link: 'quick', offset: 20 },
@@ -108,7 +109,7 @@ export default {
         align-items: center;
         font-weight: bold;
         font-size: 1.5rem;
-        color: $mainBlack;
+        color: var(--text-primary-color);
         .el-image {
           margin-right: 1rem;
         }
@@ -133,13 +134,13 @@ export default {
         }
       }
       .title {
-        color: $mainBlack;
+        color: var(--text-primary-color);
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
         font-weight: bold;
       }
       .nav-link {
-        color: $mainBlack;
+        color: var(--text-primary-color);
         margin-bottom: 1rem;
         &:hover {
           cursor: pointer;
@@ -147,19 +148,24 @@ export default {
         }
       }
       .form_title {
-        color: $mainBlack;
+        color: var(--text-primary-color);
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
         font-weight: bold;
+        padding-right: 0.5rem;
       }
       .el-input {
         margin-bottom: 1.5rem;
+        &__inner:active, &__inner:focus{
+          border-color: $mainGreen !important;
+        }
       }
     }
     &--text {
       text-align: center;
       margin-top: 2rem;
       margin-bottom: 2rem;
+      color: var(--text-primary-color);
       a {
         text-decoration: none;
         color: $mainGreen;

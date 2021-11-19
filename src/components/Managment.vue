@@ -44,16 +44,19 @@ export default {
     justify-content: space-between;
     align-items: center;
     .subtitle{
+      color: var(--text-primary-color);
       font-weight: bold;
       font-size: 1.1rem;
       margin-bottom: 1rem;
     }
     .title{
+      color: var(--text-primary-color);
       font-size: 2rem;
       font-weight: bold;
       margin-bottom: 2rem;
     }
     .text{
+      color: var(--text-primary-color);
       margin-bottom: 2rem;
     }
     &--img{

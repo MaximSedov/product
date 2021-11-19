@@ -31,7 +31,7 @@ export default {
     min-height: 345px;
     background-color: $mainGreen;
     border-radius: 1rem;
-    color: $white;
+    color: var(--background-color-primary);
     background-image: url('../assets/screen.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -47,7 +47,7 @@ export default {
       font-weight: bold;
       margin-bottom: 2rem;
       margin-top: 1rem;
-      background-color: $white;
+      background-color: var(--background-color-primary);
       color: $mainGreen;
       margin-left: 3rem;
       font-size: 1.5rem;
@@ -57,6 +57,11 @@ export default {
 @media only screen and (max-width: 992px) {
   .banner_content {
     background-image: none;
+    text-align: center;
+    margin: 2rem;
+    .el-button{
+      margin: 0;
+    }
   }
 }
 </style>
