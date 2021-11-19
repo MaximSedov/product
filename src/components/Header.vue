@@ -8,10 +8,10 @@
           </div>
           <div class='header_content--navbar'>
             <div class='header_content--navbar__links desktop'>
-              <div class v-for='(item, index) in navbar' :key='item.index'>{{item.title}}</div>
+              <div class v-for='(item, index) in navbar' :key='item.index' v-scroll-to="{ el: '#'+ item.link, offset: item.offset }">{{item.title}}</div>
             </div>
             <div class='header_content--navbar__links mobile-md'>
-              <el-button style='padding: 0 10px;margin-right: 2rem;' type='success' @click="drawer = true">
+              <el-button style='padding: 0 10px;margin-right: 2rem;' type='success' @click='drawer = true'>
                 <Icon size='24'>
                   <MenuIcon />
                 </Icon>
@@ -30,9 +30,9 @@
         </div>
       </el-col>
     </el-row>
-    <el-drawer v-model='drawer' title='Меню' direction='ttb' size="100%">
-      <div class="header_content--navbar__links--mobile">
-         <div class v-for='(item, index) in navbar' :key='item.index'>{{item.title}}</div>
+    <el-drawer v-model='drawer' title='Product' direction='ttb' size='100%'>
+      <div class='header_content--navbar__links--mobile'>
+        <div @click='drawer = false' class v-for='(item, index) in navbar' :key='item.index' v-scroll-to="{ el: '#'+ item.link, offset: item.offset }">{{item.title}}</div>
       </div>
     </el-drawer>
   </section>
@@ -49,10 +49,10 @@ export default {
       logo,
       drawer: false,
       navbar: [
-        { title: 'Продукт' },
-        { title: 'Клиенты' },
-        { title: 'Цены' },
-        { title: 'Контакты' },
+        { title: 'Продукт', link: 'specs', offset: 30 },
+        { title: 'Отзывы', link: 'quick', offset: 20 },
+        { title: 'Цены', link: 'price', offset: 20 },
+        { title: 'Контакты', link: 'contacts', offset: 0 },
       ],
     }
   },
@@ -60,6 +60,16 @@ export default {
     Icon,
     ModeNightRound,
     MenuIcon,
+  },
+  methods: {
+    scrollToElement() {
+      const el = this.$parent.$refs.scrollToMe
+
+      if (el) {
+        // Use el.scrollIntoView() to instantly scroll to the element
+        el.scrollIntoView({ behavior: 'smooth' })
+      }
+    },
   },
 }
 </script>
@@ -126,17 +136,31 @@ export default {
       }
     }
   }
-  &_content--navbar__links--mobile{
+  &_content--navbar__links--mobile {
     text-align: center;
     color: $mainBlack;
-    div{
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      &:hover{
+    div {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      &:hover {
         color: $mainGreen;
         cursor: pointer;
       }
     }
+  }
+  .el-drawer__header {
+    span,
+    button {
+      font-size: 2rem !important;
+    }
+  }
+  .el-drawer__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .el-drawer__close-btn:hover i {
+    color: $mainGreen;
   }
 }
 @media only screen and (min-width: 992px) {

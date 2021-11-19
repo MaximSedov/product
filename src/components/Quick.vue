@@ -1,5 +1,5 @@
 <template>
-  <section class='quick'>
+  <section class='quick' id="quick">
     <el-row  justify='center' class='quick_content'>
       <el-col :xs='22' :sm='22' :md='20' :lg='20' :xl='20'>
         <div class='header'>

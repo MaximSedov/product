@@ -1,5 +1,5 @@
 <template>
-  <section class='footer'>
+  <section class='footer' id='contacts'>
     <el-row justify='center' class='footer_content'>
       <el-col :xs='22' :sm='22' :md='20' :lg='20' :xl='20'>
         <el-row>
@@ -22,51 +22,49 @@
             </div>
           </el-col>
           <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6'>
-              <div class="block">
-                  <div class="title">Ресуры</div>
-                  <div class="nav-link">Продукт</div>
-                  <div class="nav-link">Клиенты</div>
-                  <div class="nav-link">Цены</div>
-                  <div class="nav-link">Контакты</div>
-              </div>
+            <div class='block'>
+              <div class='title'>Ресуры</div>
+              <div class='nav-link' v-for='(item, index) in navbar' :key='item.index' v-scroll-to="{ el: '#'+ item.link, offset: item.offset }">{{item.title}}</div>
+            </div>
           </el-col>
-          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6' class="desktop">
-              <div class="block">
-                  <div class="title">Юридические вопросы</div>
-                  <div class="nav-link">Финансирование</div>
-                  <div class="nav-link">Политика конфиденциальности</div>
-                  <div class="nav-link">Условия обслуживания</div>
-              </div>
+          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6' class='desktop'>
+            <div class='block'>
+              <div class='title'>Юридические вопросы</div>
+              <div class='nav-link'>Финансирование</div>
+              <div class='nav-link'>Политика конфиденциальности</div>
+              <div class='nav-link'>Условия обслуживания</div>
+            </div>
           </el-col>
-          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6' class="desktop">
-              <div class="block">
-                  <div class="form_title">Lorem ipsum dolor sit amet consectetur.</div>
-                  <el-input v-model="input" placeholder="Почта" />
-                   <el-button style='font-weight:bold' type='success'>Отправить</el-button>
-              </div>
+          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6' class='desktop'>
+            <div class='block'>
+              <div class='form_title'>Lorem ipsum dolor sit amet consectetur.</div>
+              <el-input v-model='input' placeholder='Почта' />
+              <el-button style='font-weight:bold' type='success'>Отправить</el-button>
+            </div>
           </el-col>
-          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6' class="mobile">
-              <div class="block">
-                  <div class="form_title">Lorem ipsum dolor sit amet consectetur.</div>
-                  <el-input v-model="input" placeholder="Почта" />
-                   <el-button style='font-weight:bold' type='success'>Отправить</el-button>
-              </div>
+          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6' class='mobile'>
+            <div class='block'>
+              <div class='form_title'>Lorem ipsum dolor sit amet consectetur.</div>
+              <el-input v-model='input' placeholder='Почта' />
+              <el-button style='font-weight:bold' type='success'>Отправить</el-button>
+            </div>
           </el-col>
-          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6' class="mobile">
-              <div class="block">
-                  <div class="title">Юридические вопросы</div>
-                  <div class="nav-link">Финансирование</div>
-                  <div class="nav-link">Политика конфиденциальности</div>
-                  <div class="nav-link">Условия обслуживания</div>
-              </div>
+          <el-col :xs='12' :sm='12' :md='6' :lg='6' :xl='6' class='mobile'>
+            <div class='block'>
+              <div class='title'>Юридические вопросы</div>
+              <div class='nav-link'>Финансирование</div>
+              <div class='nav-link'>Политика конфиденциальности</div>
+              <div class='nav-link'>Условия обслуживания</div>
+            </div>
           </el-col>
         </el-row>
         <el-row justify='center'>
-            <el-col :xs='22' :sm='22' :md='24' :lg='24' :xl='24'>
-                <div class="footer_content--text">
-                    dev by <a href="https://sdvmxm.ru" target="_blank" rel="noopener noreferrer">sdvmxm</a> / design by Figmaland && канал @figma2html
-                </div>
-            </el-col>
+          <el-col :xs='22' :sm='22' :md='24' :lg='24' :xl='24'>
+            <div class='footer_content--text'>
+              dev by
+              <a href='https://sdvmxm.ru' target='_blank' rel='noopener noreferrer'>sdvmxm</a> / design by Figmaland && канал @figma2html
+            </div>
+          </el-col>
         </el-row>
       </el-col>
     </el-row>
@@ -83,6 +81,11 @@ export default {
   data() {
     return {
       logo,
+      navbar: [
+        { title: 'Продукт', link: 'specs', offset: 30 },
+        { title: 'Отзывы', link: 'quick', offset: 20 },
+        { title: 'Цены', link: 'price', offset: 20 },
+      ],
     }
   },
   components: {
@@ -120,67 +123,67 @@ export default {
           border-radius: 50%;
           background-color: $mainGray;
           margin-right: 0.5rem;
-          &:last-child{
-              margin-right: 0;
+          &:last-child {
+            margin-right: 0;
           }
-          &:hover{
-              cursor: pointer;
-              color: $darkGreen;
+          &:hover {
+            cursor: pointer;
+            color: $darkGreen;
           }
         }
       }
-      .title{
-          color: $mainBlack;
-          font-size: 1.3rem;
-          margin-bottom: 1.5rem;
-          font-weight: bold;
+      .title {
+        color: $mainBlack;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        font-weight: bold;
       }
-      .nav-link{
-          color: $mainBlack;
-          margin-bottom: 1rem;
-          &:hover{
-              cursor: pointer;
-              color: $mainGreen;
-          }
+      .nav-link {
+        color: $mainBlack;
+        margin-bottom: 1rem;
+        &:hover {
+          cursor: pointer;
+          color: $mainGreen;
+        }
       }
-      .form_title{
-          color: $mainBlack;
-          font-size: 1.3rem;
-          margin-bottom: 1.5rem;
-          font-weight: bold;
+      .form_title {
+        color: $mainBlack;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        font-weight: bold;
       }
-      .el-input{
-          margin-bottom: 1.5rem;
+      .el-input {
+        margin-bottom: 1.5rem;
       }
     }
-    &--text{
-        text-align: center;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        a{
-            text-decoration: none;
-            color: $mainGreen;
-            &:hover{
-                color: $darkGreen;
-                cursor: pointer;
-                text-decoration: underline;
-            }
+    &--text {
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      a {
+        text-decoration: none;
+        color: $mainGreen;
+        &:hover {
+          color: $darkGreen;
+          cursor: pointer;
+          text-decoration: underline;
         }
+      }
     }
   }
 }
 @media only screen and (max-width: 992px) {
-  .footer_content .desktop{
-      display: none;
+  .footer_content .desktop {
+    display: none;
   }
-  .footer_content .block .el-input{
+  .footer_content .block .el-input {
     padding-right: 1rem !important;
     box-sizing: border-box;
   }
 }
 @media only screen and (min-width: 992px) {
-  .footer_content .mobile{
-      display: none;
+  .footer_content .mobile {
+    display: none;
   }
 }
 </style>

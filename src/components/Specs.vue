@@ -1,5 +1,5 @@
 <template>
-  <section class='specs'>
+  <section class='specs' id="specs">
     <el-row  justify='center' class='specs_content'>
       <el-col :xs='22' :sm='22' :md='8' :lg='20' :xl='20'>
         <div class='header'>

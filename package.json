@@ -12,6 +12,8 @@
     "element-plus": "^1.2.0-beta.3",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
+    "vue-scroll-progress": "^1.1.5",
+    "vue-scrollto": "^2.20.0",
     "vue-slick-carousel": "^1.0.6",
     "vue3-carousel": "^0.1.30",
     "vuex": "^4.0.0-0"

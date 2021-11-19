@@ -15,7 +15,7 @@
                 <div class='carousel__item'>
                   <div class='item'>
                     <div class='image'>
-                      <el-image style='width: 100%; height: 100%' :src='require("@/assets/photo-"+(index+1)+".jpg")' fit='cover'></el-image>
+                      <el-image style='width: 100%; height: 100%' :src='require("@/assets/photo-"+(index+1)+".jpg")' fit='cover' lazy></el-image>
                     </div>
                     <div class='subtitle'>
                       <div class='author'>

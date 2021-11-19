@@ -55,7 +55,7 @@ export default {
   }
 }
 @media only screen and (max-width: 992px) {
-  .banner_content{
+  .banner_content {
     background-image: none;
   }
 }

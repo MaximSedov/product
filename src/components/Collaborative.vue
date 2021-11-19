@@ -14,7 +14,7 @@
       </el-col>
       <el-col :xs='22' :sm='22' :md='10' :lg='13' :xl='13'>
         <div class='collaborative_content--img'>
-          <el-image :src='collaborative' fit='cover'></el-image>
+          <el-image :src='collaborative' fit='cover' lazy></el-image>
         </div>
       </el-col>
     </el-row>
