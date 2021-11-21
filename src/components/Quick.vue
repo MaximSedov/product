@@ -63,10 +63,10 @@ import {
   Smartwatch20Filled,
 } from '@vicons/fluent'
 import { Icon } from '@vicons/utils'
-const avatar_1 = require('../assets/avatar-1.jpg')
-const avatar_2 = require('../assets/avatar-2.jpg')
-const avatar_3 = require('../assets/avatar-3.jpg')
-const avatar_4 = require('../assets/avatar-4.jpg')
+const avatar_1 = require('../assets/avatar-1.webp')
+const avatar_2 = require('../assets/avatar-2.webp')
+const avatar_3 = require('../assets/avatar-3.webp')
+const avatar_4 = require('../assets/avatar-4.webp')
 export default {
   data() {
     return {
@@ -89,13 +89,11 @@ export default {
 <style lang="scss">
 @import '../colors.scss';
 .quick {
-  background-image: url('../assets/quick-bg.png');
+  background-image: url('../assets/blob.svg');
   background-repeat: no-repeat;
-  background-size: cover;
   background-position-x: center;
   background-position-y: bottom;
   min-height: 600px;
-
   &_content {
     min-height: 600px;
     padding-top: 1rem;
@@ -133,7 +131,7 @@ export default {
         }
         .comment {
           position: relative;
-          background-color: var(--background-color-primary);
+          background-color: var(--l-white-d-green);
           border-radius: 2rem;
           padding: 1rem;
           z-index: 1;
@@ -150,7 +148,7 @@ export default {
             width: 2rem;
             height: 2rem;
             border-radius: 0.5rem;
-            background-color: var(--background-color-primary);
+            background-color: var(--l-white-d-green);
             left: 3rem;
             bottom: -0.5rem;
             transform: rotate(150deg);
@@ -161,7 +159,7 @@ export default {
             width: 2rem;
             height: 2rem;
             border-radius: 0.5rem;
-            background-color: var(--background-color-primary);
+            background-color: var(--l-white-d-green);
             right: 3rem;
             bottom: -0.5rem;
             transform: rotate(120deg);

@@ -9,8 +9,7 @@ $mainRed: #F03E3D;
 $mainGray: #f5f5f5;
 $mainBlack: #37474F;
 $darkGray: #b8b8b8;
-$mainBgLight: url("/assets/main-bg.png");
-$mainBgDark: url("/assets/main-bg-dark.png");
+
 
 :root {
     --background-color-primary: #{$white};
@@ -18,7 +17,7 @@ $mainBgDark: url("/assets/main-bg-dark.png");
     --accent-color: #{$mainGreen};
     --text-primary-color: #{$mainBlack};
     --text-secondary-color: #{$mainGreen};
-    --main-bg: #{$mainBgLight};
+    --l-white-d-green: #{$white};
   }
 
 :root.dark-theme {
@@ -27,5 +26,5 @@ $mainBgDark: url("/assets/main-bg-dark.png");
     --accent-color: #{$mainGreen};
     --text-primary-color: #{$white};
     --text-secondary-color: #{$mainGreen};
-    --main-bg: #{$mainBgDark};
+    --l-white-d-green: #{$mainGreen};
 }

@@ -76,6 +76,7 @@ Header, Main, Specs, Managment, Customer, Collaborative, Quick, Strategies, Pric
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 *{
   font-family: 'Roboto', sans-serif;
+  font-display: block;
 }
 html,body, p,ul,ol,li, h1, h2, span{
   margin: 0;

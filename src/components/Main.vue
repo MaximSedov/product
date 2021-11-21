@@ -46,7 +46,7 @@ export default {
 <style lang="scss">
 @import '../colors.scss';
 .main {
-  background-image: var(--main-bg);
+  background-image: url("../assets/main-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;

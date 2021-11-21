@@ -15,7 +15,7 @@
                 <div class='carousel__item'>
                   <div class='item'>
                     <div class='image'>
-                      <el-image style='width: 100%; height: 100%' :src='require("@/assets/photo-"+(index+1)+".jpg")' fit='cover' lazy></el-image>
+                      <el-image style='width: 100%; height: 100%' :src='require("@/assets/photo-"+(index+1)+".webp")' fit='cover' lazy></el-image>
                     </div>
                     <div class='subtitle'>
                       <div class='author'>
@@ -112,9 +112,27 @@ export default defineComponent({
 <style lang="scss">
 @import '../colors.scss';
 .strategies {
-  padding-top: 6rem;
-  background-color: $mainGray;
+  //background-color: $mainGray;
+  min-height: 400px;
+  &:before{
+    content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('../assets/blob.svg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  -webkit-transform: rotate(180) scale(-1, 1);
+  -moz-transform: rotate(180deg) scale(-1, 1);
+  -ms-transform: rotate(180deg) scale(-1, 1);
+  -o-transform: rotate(180deg) scale(-1, 1);
+  transform: rotate(180deg) scale(-1, 1);
+  }
   &_content {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,13 +140,13 @@ export default defineComponent({
       text-align: center;
       &_title {
         font-size: 2rem;
-        color: $mainBlack !important;
+        color: var(--text-primary-color) !important;
         margin-bottom: 2rem;
         font-weight: bold;
       }
       &_subtitle {
         font-weight: bold;
-        color: $mainBlack !important;
+        color: var(--text-primary-color) !important;
         margin-bottom: 2rem;
       }
     }
@@ -167,6 +185,7 @@ export default defineComponent({
           padding: 1rem;
           display: flex;
           align-items: center;
+          color: var(--text-primary-color) !important;
           .author {
           }
         }

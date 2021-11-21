@@ -110,9 +110,9 @@
 import StarEmphasis20Filled from '@vicons/fluent/StarEmphasis20Filled'
 import StarEmphasis20Regular from '@vicons/fluent/StarEmphasis20Regular'
 import { Icon } from '@vicons/utils'
-const avatar_5 = require('../assets/avatar-5.jpg')
-const avatar_6 = require('../assets/avatar-6.jpg')
-const avatar_7 = require('../assets/avatar-7.jpg')
+const avatar_5 = require('../assets/avatar-5.webp')
+const avatar_6 = require('../assets/avatar-6.webp')
+const avatar_7 = require('../assets/avatar-7.webp')
 export default {
   data() {
     return {
